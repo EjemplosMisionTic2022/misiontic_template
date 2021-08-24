@@ -29,12 +29,14 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: MyTheme.ligthTheme,
-      darkTheme: MyTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      home: !isLoaded ? CircularProgressIndicator() : StatelessList(),
-    );
+    return !isLoaded
+        ? CircularProgressIndicator()
+        : GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: MyTheme.ligthTheme,
+            darkTheme: MyTheme.darkTheme,
+            themeMode: ThemeMode.system,
+            home: StatelessList(),
+          );
   }
 }
