@@ -1,5 +1,5 @@
-import 'package:misiontic_template/domain/repositories/shared_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'shared_preferences_interface.dart';
 
 class LocalPreferences implements SharedPreferencesInterface {
   @override
@@ -9,6 +9,7 @@ class LocalPreferences implements SharedPreferencesInterface {
     switch (T) {
       case bool:
         value = prefs.getBool(key);
+        print("LocalPreferences getBool with key $key got $value");
         break;
       case double:
         value = prefs.getDouble(key);
@@ -32,6 +33,7 @@ class LocalPreferences implements SharedPreferencesInterface {
     switch (T) {
       case bool:
         prefs.setBool(key, value as bool);
+        print("LocalPreferences setBool with key $key got $value");
         break;
       case double:
         prefs.setDouble(key, value as double);

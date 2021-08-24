@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:misiontic_template/domain/use_case/controller.dart';
+import 'package:misiontic_template/domain/controllers/controller.dart';
 import 'package:misiontic_template/presentation/widgets/appbar.dart';
 
 import 'content/indext.dart';
 
 class StatelessList extends StatelessWidget {
-  final Controller controller = Get.find();
+  final ThemeController controller = Get.find();
   StatelessList({Key? key}) : super(key: key);
 
   // We create a Scaffold that is used for all the content pages

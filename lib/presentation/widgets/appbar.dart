@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:misiontic_template/domain/use_case/controller.dart';
+import 'package:misiontic_template/domain/controllers/controller.dart';
 
 class CustomAppBar extends AppBar {
   final Widget tile;
   final BuildContext context;
-  final Controller controller;
+  final ThemeController controller;
 
   // Creating a custom AppBar that extends from Appbar with super();
   CustomAppBar({
