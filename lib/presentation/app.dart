@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:misiontic_template/domain/controllers/controller.dart';
-import 'package:misiontic_template/domain/use_case/theme_management.dart';
 import 'package:misiontic_template/presentation/pages/stateless/index.dart';
 import 'package:misiontic_template/presentation/theme/theme.dart';
 
@@ -15,10 +14,16 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   // Dependency injection: setting up state management
   late final ThemeController controller = Get.put(ThemeController());
+  bool isLoaded = false;
+
+  Future<void> initializeTheme() async {
+    await controller.initializeTheme();
+    setState(() => isLoaded = true);
+  }
 
   @override
   void initState() {
-    controller.initializeTheme();
+    initializeTheme();
     super.initState();
   }
 
@@ -28,7 +33,8 @@ class _AppState extends State<App> {
       debugShowCheckedModeBanner: false,
       theme: MyTheme.ligthTheme,
       darkTheme: MyTheme.darkTheme,
-      home: StatelessList(),
+      themeMode: ThemeMode.system,
+      home: !isLoaded ? CircularProgressIndicator() : StatelessList(),
     );
   }
 }

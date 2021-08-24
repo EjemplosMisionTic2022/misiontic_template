@@ -18,7 +18,7 @@ class ThemeController extends GetxController {
   bool get darkMode => _isDarkMode.value;
 
   // Getters
-  void initializeTheme() async {
+  Future<void> initializeTheme() async {
     _isDarkMode.value = await themeManager.initializeTheme;
   }
 }
