@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:misiontic_template/domain/controllers/controller.dart';
+import 'package:misiontic_template/domain/controllers/theme_controller.dart';
 
 class CustomAppBar extends AppBar {
   final Widget tile;
