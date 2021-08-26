@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:misiontic_template/domain/use_case/controller.dart';
+import 'package:misiontic_template/domain/controllers/theme_controller.dart';
 import 'package:misiontic_template/presentation/pages/stateful/index.dart';
 
 class WidgetList extends StatelessWidget {
-  final Controller controller;
+  final ThemeController controller;
 
   WidgetList({required this.controller});
 
