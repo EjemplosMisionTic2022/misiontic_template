@@ -3,22 +3,16 @@ import 'package:misiontic_template/domain/use_case/theme_management.dart';
 
 class ThemeController extends GetxController {
   // Using Rx<> for custom class reactivity
-  var _isDarkMode = false.obs;
-  ThemeManager themeManager = new ThemeManager();
+  var _isDarkMode = RxBool(false);
 
   // Setters
   set darkMode(bool mode) {
     _isDarkMode.value = mode;
-    themeManager.changeTheme(isDarkMode: mode);
   }
 
   // Reactive Getters
-  //RxBool get reactiveDarkMode => _isDarkMode;
-
-  bool get darkMode => _isDarkMode.value;
+  RxBool get reactiveDarkMode => _isDarkMode;
 
   // Getters
-  Future<void> initializeTheme() async {
-    _isDarkMode.value = await themeManager.initializeTheme;
-  }
+  bool get darkMode => _isDarkMode.value;
 }
