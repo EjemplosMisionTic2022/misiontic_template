@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'shared_preferences_interface.dart';
+import 'package:misiontic_template/domain/repositories/shared_preferences.dart';
 
 class LocalPreferences implements SharedPreferencesInterface {
   @override
