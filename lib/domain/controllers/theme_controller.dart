@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:misiontic_template/domain/use_case/theme_management.dart';
 
 class ThemeController extends GetxController {
   // Using Rx<> for custom class reactivity
