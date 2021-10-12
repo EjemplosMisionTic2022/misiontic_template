@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
 class WidgetList extends StatefulWidget {
+  const WidgetList({Key? key}) : super(key: key);
+
   @override
   _State createState() => _State();
 }
@@ -31,7 +33,7 @@ class _State extends State<WidgetList> {
         Center(
           child: TextField(
             controller: _textController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Editar text',
             ),
             onChanged: (text) {
@@ -42,13 +44,13 @@ class _State extends State<WidgetList> {
             },
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Center(
           child: Text(
               "Estado: ${_group == RadioState.on ? 'Encendido' : 'Apagado'}"),
         ),
         ListTile(
-          title: Text('Encendido'),
+          title: const Text('Encendido'),
           leading: Radio<RadioState>(
             value: RadioState.on,
             groupValue: _group,
@@ -60,7 +62,7 @@ class _State extends State<WidgetList> {
           ),
         ),
         ListTile(
-          title: Text('Apagado'),
+          title: const Text('Apagado'),
           leading: Radio<RadioState>(
             value: RadioState.off,
             groupValue: _group,
@@ -71,7 +73,7 @@ class _State extends State<WidgetList> {
             },
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Center(
           child: Text("Valor seleccionado: ${_sliderValue.toInt()}"),
         ),
@@ -87,14 +89,14 @@ class _State extends State<WidgetList> {
           divisions: 8,
           label: "${_sliderValue.toInt()}",
         ),
-        Spacer(),
+        const Spacer(),
         Padding(
           padding: const EdgeInsets.only(top: 16.0),
           child: ElevatedButton(
               onPressed: () {
                 Get.back();
               },
-              child: Text('Volver')),
+              child: const Text('Volver')),
         ),
       ],
     );

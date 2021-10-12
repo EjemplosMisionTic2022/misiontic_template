@@ -36,7 +36,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return !isLoaded
-        ? CircularProgressIndicator()
+        ? const CircularProgressIndicator()
         : GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: MyTheme.ligthTheme,

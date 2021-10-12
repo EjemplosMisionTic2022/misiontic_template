@@ -16,7 +16,7 @@ class StatelessList extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         controller: controller,
-        tile: Text("Stateless Widgets"),
+        tile: const Text("Stateless Widgets"),
         context: context,
       ),
       body: SafeArea(
@@ -27,7 +27,7 @@ class StatelessList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

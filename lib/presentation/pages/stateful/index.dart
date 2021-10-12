@@ -15,12 +15,12 @@ class StatefulList extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         controller: controller,
-        tile: Text("Stateful Widgets"),
+        tile: const Text("Stateful Widgets"),
         context: context,
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
+          padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
           child: WidgetList(),
         ),
       ),

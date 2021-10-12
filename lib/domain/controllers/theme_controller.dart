@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 class ThemeController extends GetxController {
   // Using Rx<> for custom class reactivity
-  var _isDarkMode = RxBool(false);
+  final _isDarkMode = RxBool(false);
 
   // Setters
   set darkMode(bool mode) {

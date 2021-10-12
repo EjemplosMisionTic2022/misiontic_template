@@ -9,7 +9,6 @@ class LocalPreferences implements SharedPreferencesInterface {
     switch (T) {
       case bool:
         value = prefs.getBool(key);
-        print("LocalPreferences getBool with key $key got $value");
         break;
       case double:
         value = prefs.getDouble(key);
@@ -33,7 +32,6 @@ class LocalPreferences implements SharedPreferencesInterface {
     switch (T) {
       case bool:
         prefs.setBool(key, value as bool);
-        print("LocalPreferences setBool with key $key got $value");
         break;
       case double:
         prefs.setDouble(key, value as double);
