@@ -7,11 +7,13 @@ class MyTheme {
     return ThemeData(
       brightness: Brightness.light,
       primarySwatch: AppColors.createMaterialColor(AppColors.primaryColor),
-      accentColor:
-          AppColors.createMaterialColor(AppColors.accentColor).shade500,
+      colorScheme: AppColors.lightScheme,
       fontFamily: AppTextStyle.fontFamily,
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: Colors.white,
+      ),
       inputDecorationTheme: InputDecorationTheme(
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
         fillColor: Colors.grey.shade300,
       ),
     );
@@ -23,13 +25,14 @@ class MyTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: AppColors.createMaterialColor(AppColors.primaryColor),
-      accentColor:
-          AppColors.createMaterialColor(AppColors.accentColor).shade500,
+      colorScheme: AppColors.darkScheme,
       toggleableActiveColor:
           AppColors.createMaterialColor(AppColors.primaryColor).shade500,
       // this can all be copied, waiting for verification
       fontFamily: AppTextStyle.fontFamily,
-      floatingActionButtonTheme: FloatingActionButtonThemeData(),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: Colors.white,
+      ),
       // copy from ligthTheme
       inputDecorationTheme: ligthTheme.inputDecorationTheme,
     );

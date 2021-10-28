@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:misiontic_template/domain/controllers/theme_controller.dart';
+import 'package:misiontic_template/presentation/pages/stateful/screens/stateful_screen.dart';
 import 'package:misiontic_template/presentation/widgets/appbar.dart';
 
-import 'content/indext.dart';
-
-class StatelessList extends StatelessWidget {
+class StatefulList extends StatelessWidget {
   final ThemeController controller = Get.find();
-  StatelessList({Key? key}) : super(key: key);
+  StatefulList({Key? key}) : super(key: key);
 
   // We create a Scaffold that is used for all the content pages
   // We only define one AppBar, and one scaffold.
@@ -16,18 +15,14 @@ class StatelessList extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         controller: controller,
-        tile: Text("Stateless Widgets"),
+        tile: const Text("Stateful Widgets"),
         context: context,
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
-          child: WidgetList(controller: controller),
+          padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
+          child: WidgetList(),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
       ),
     );
   }
