@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:misiontic_template/domain/controllers/theme_controller.dart';
+import 'package:misiontic_template/domain/use_case/controllers/theme_controller.dart';
 import 'package:misiontic_template/presentation/pages/stateful/screens/stateful_screen.dart';
 import 'package:misiontic_template/presentation/widgets/appbar.dart';
 
